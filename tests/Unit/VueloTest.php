@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use App\Models\Vuelo;
 
 class VueloTest extends TestCase
 {
@@ -11,8 +12,16 @@ class VueloTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    /**@test*/
+    public function test_disponibilidad_de_vuelo()
     {
-        $this->assertTrue(true);
+      $vuelo= new Vuelo;
+      echo $vuelo->disponibilidadDeVuelo();
+
+       $respuesta = $vuelo->disponibilidadDeVuelo();
+
+
+
+        $this->assertEquals(true,$respuesta);
     }
 }

@@ -16,11 +16,9 @@ class VueloTest extends TestCase
     public function test_disponibilidad_de_vuelo()
     {
       $vuelo= new Vuelo;
-      echo $vuelo->disponibilidadDeVuelo();
+      echo $vuelo->disponibilidadDeVuelo(5,10);
 
-       $respuesta = $vuelo->disponibilidadDeVuelo();
-
-
+       $respuesta = $vuelo->disponibilidadDeVuelo(5,10);
 
         $this->assertEquals(true,$respuesta);
     }

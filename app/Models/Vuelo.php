@@ -10,7 +10,20 @@ class Vuelo extends Model
 {
     use HasFactory;
 
-    public static function disponibilidadDeVuelo(){
-        return True;
+    public static function disponibilidadDeVuelo($capacidadDeUso, $capacidadMaxima){
+
+        $disponibilidad = false;
+
+        if($capacidadDeUso == $capacidadMaxima){
+
+            $disponibilidad = false;
+
+        }else if($capacidadDeUso < $capacidadMaxima){
+
+            $disponibilidad = true;
+
+        }
+
+        return $disponibilidad;
     }
 }

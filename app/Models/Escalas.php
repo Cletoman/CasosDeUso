@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Escalas extends Model
 {
     use HasFactory;
+
+    protected $cuidad =null;
+    protected $subePasajero = null;
+    protected $bajaPasajero = null;
 }

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Avion extends Model
 {
     use HasFactory;
+
+    protected $capacidad = null;
 }

@@ -10,6 +10,10 @@ class Receta extends Model
 {
     use HasFactory;
 
+    protected string $titulo;
+    protected int $porciones;
+    protected string $instruciones;
+
     public static function disponibilidaDePorciones($cantidaRequerida,$cantidaReceta){
 
         $resultado=NULL;
